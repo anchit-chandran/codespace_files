@@ -1,8 +1,8 @@
 {
   "name": "MediCode Dev",
   "image": "mcr.microsoft.com/devcontainers/python:1-3.11-bookworm",
-  "workspaceFolder": "/workspaces/medicode-student-env/student",
-  "postCreateCommand": "cd /workspaces/medicode-student-env && chmod +x init-post-setup.sh && ./init-post-setup.sh",
+  "workspaceFolder": "/workspaces/codespace_files/student",
+  "postCreateCommand": "cd /workspaces/codespace_files && chmod +x init-post-setup.sh && ./init-post-setup.sh",
   "runArgs": ["--network=host"],
   "customizations": {
     "vscode": {
