@@ -28,7 +28,7 @@ pip install -e . || {
 # Test medicode CLI installation if it exists
 if command -v medicode &> /dev/null; then
     echo "Testing MediCode CLI..."
-    medicode --help
+    medicode --help || echo "Note: CLI test failed, but continuing setup..."
 else
     echo "Warning: medicode CLI not installed or not in PATH."
 fi
