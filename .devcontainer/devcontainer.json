@@ -49,5 +49,6 @@
   },
   "initializeCommand": "mkdir -p ~/.oh-my-zsh/custom/plugins || true",
   "onCreateCommand": "git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions || true",
-  "updateContentCommand": "echo 'PROMPT=\"%F{#FF4D4D}medicode%f ➜ %~ $ \"' >> ~/.zshrc && echo 'plugins=(git zsh-autosuggestions)' >> ~/.zshrc"
+  "postStartCommand": "source /workspaces/codespace_files/.venv/bin/activate || true",
+  "updateContentCommand": "echo 'PROMPT=\"%F{#FF4D4D}medicode%f ➜ %~ $ \"' >> ~/.zshrc && echo 'plugins=(git zsh-autosuggestions)' >> ~/.zshrc && echo 'source /workspaces/codespace_files/.venv/bin/activate' >> ~/.zshrc"
 }
