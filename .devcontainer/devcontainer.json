@@ -1,0 +1,53 @@
+{
+  "name": "MediCode Dev",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.11-bookworm",
+  "workspaceFolder": "/workspaces/medicode/codespace_files/student",
+  "postCreateCommand": "cd /workspaces/medicode/codespace_files && chmod +x init-post-setup.sh && ./init-post-setup.sh",
+  "runArgs": ["--network=host"],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.black-formatter"
+      ],
+      "settings": {
+        "workbench.colorTheme": "Default Dark+",
+        "workbench.preferredDarkColorTheme": "Default Dark+",
+        "workbench.preferredLightColorTheme": "Default Light+",
+        "workbench.colorCustomizations": {
+          "[Default Dark+]": {
+            "editor.background": "#0F0F0F",
+            "editor.selectionBackground": "#FF4D4D40",
+            "editorCursor.foreground": "#FF4D4D",
+
+            "titleBar.activeBackground": "#121212",
+            "titleBar.inactiveBackground": "#121212",
+
+            "activityBar.background": "#121212",
+            "activityBarBadge.background": "#710000",
+            "activityBarBadge.foreground": "#FFFFFF",
+
+            "statusBar.background": "#121212",
+            "statusBar.border": "#710000",
+
+            "sideBar.background": "#121212",
+            "sideBarSectionHeader.background": "#1E1E1E"
+          }
+        },
+        "terminal.integrated.defaultProfile.linux": "zsh"
+      }
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": true,
+      "configureZshAsDefaultShell": true,
+      "installOhMyZsh": true
+    }
+  },
+  "initializeCommand": "mkdir -p ~/.oh-my-zsh/custom/plugins || true",
+  "onCreateCommand": "git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions || true",
+  "updateContentCommand": "echo 'PROMPT=\"%F{#FF4D4D}medicode%f ➜ %~ $ \"' >> ~/.zshrc && echo 'plugins=(git zsh-autosuggestions)' >> ~/.zshrc"
+}

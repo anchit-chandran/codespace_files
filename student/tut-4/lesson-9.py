@@ -1,0 +1,1 @@
+hand_nerves = ['radial', 'ulnar', 'median', 'maxillary']
